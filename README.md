@@ -1,2 +1,2 @@
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/1808Avenue/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/1808Avenue/frontend-project-lvl1/actions)
+[![Actions Status](https://github.com/1808Avenue/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/1808Avenue/frontend-project-lvl1/actions)https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0
