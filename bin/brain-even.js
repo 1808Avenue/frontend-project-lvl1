@@ -1,25 +1,16 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 
-// GREETING 
-console.log('Welcome to the Brain Games!');
-const userName = readlineSync.question('May I have your name? ');
-console.log(`Hello, ${userName}!`);
-// GREETING //
+const runBrainEven = () => {
+    console.log('Welcome to the Brain Games!');
+    const userName = readlineSync.question('May I have your name? ');
+    console.log(`Hello, ${userName}!`);
 
+    console.log('Answer "yes" if the number is even, otherwise answer "no".');
+    let limitNumber = 20;
+    const randomNumber = Math.round(Math.random() * limitNumber);
+    console.log(`Question: ${randomNumber}`);
 
-
-
-// ANSWER YES OR NO
-console.log('Answer "yes" if the number is even, otherwise answer "no".');
-const limitNumber = 20;
-const randomNumber = Math.round(Math.random() * limitNumber);
-console.log(`Question: ${randomNumber}`);
-// ANSWER YES OR NO //
-
-
-
-const getAnswer = () => {
     let correctAnswer = '';
 
     if (randomNumber % 2 === 0) {
@@ -66,5 +57,3 @@ const getAnswer = () => {
         return `'${userAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
     };
 };
-
-console.log(getAnswer());
