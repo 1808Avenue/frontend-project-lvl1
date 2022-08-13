@@ -57,3 +57,4 @@ const runBrainEven = () => {
         return `'${userAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
     };
 };
+console.log(runBrainEven());
