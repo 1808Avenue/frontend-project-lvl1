@@ -6,9 +6,10 @@ const userName = readlineSync.question('May I have your name? ');
 console.log(`Hello, ${userName}!`);
 
 
-const getRandomNumberInRange = (min, max) => {
+ const getRandomNumberInRange = (min, max) => {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
+export default getRandomNumberInRange;
 
 console.log('What number is missing in the progression?');
   
