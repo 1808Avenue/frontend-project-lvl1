@@ -9,3 +9,5 @@ brain gcd https://asciinema.org/a/6IoyGxT5MEGpZw9PBPRQGorkJ
 
 brain progression https://asciinema.org/a/q48N9pmI6fjyasNi8qxfNzcb2
 
+brain prime https://asciinema.org/a/UjBB9URtKpgQHAhqbV4YRSbv9
+
