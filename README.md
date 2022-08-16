@@ -11,3 +11,4 @@ brain progression https://asciinema.org/a/q48N9pmI6fjyasNi8qxfNzcb2
 
 brain prime https://asciinema.org/a/UjBB9URtKpgQHAhqbV4YRSbv9
 
+<a href="https://codeclimate.com/github/1808Avenue/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/522e4dc9052df218b3b1/maintainability" /></a>
