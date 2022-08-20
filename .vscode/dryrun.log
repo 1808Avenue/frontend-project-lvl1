@@ -1,5 +1,0 @@
-make --dry-run --always-make --keep-going --print-directory
-make: Entering directory `/Users/otto/frontend-project-lvl1'
-npm install ci
-make: Leaving directory `/Users/otto/frontend-project-lvl1'
- 
