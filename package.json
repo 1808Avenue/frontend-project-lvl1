@@ -26,7 +26,6 @@
   },
   "homepage": "https://github.com/1808Avenue/frontend-project-lvl1#readme",
   "dependencies": {
-    "ci": "^2.2.0",
     "readline-sync": "^1.4.10"
   },
   "devDependencies": {
