@@ -6,7 +6,7 @@
 
 Консольные, интерактивные мини-игры.
 
-brain even https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0
+brain even <a href="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0" target="_blank"><img src="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0.svg" /></a>
 
 brain calc https://asciinema.org/a/qOJcorOECOx4LukIm9hVMHxus
 
