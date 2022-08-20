@@ -6,8 +6,7 @@
 
 Консольные, интерактивные мини-игры.
 
-<a href="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0" target="_blank">
-<img src="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0.svg" /></a>
+<script id="asciicast-Swr3AAfMnCsahDIBumrAy4gm0" src="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0.js" async></script>
 
 brain calc https://asciinema.org/a/qOJcorOECOx4LukIm9hVMHxus
 
