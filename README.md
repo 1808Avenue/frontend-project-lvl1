@@ -6,6 +6,7 @@
 <h3>Системные требования:</h3>
 <p>Node.js версии 13 и выше.</p>
 <h3>Установка:</h3>
+<a href="https://asciinema.org/a/iKBr7k64DcrNbZdrz5LnVvFOZ" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/iKBr7k64DcrNbZdrz5LnVvFOZ.svg"></a>
 <p></p>
 
 <h3 style="text-align: center;">brain even</h3>
