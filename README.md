@@ -6,13 +6,29 @@
 
 Консольные, интерактивные мини-игры.
 
-<a href="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0" target="_blank"><img style="width: 200px; height: 100px;" src="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0.svg" /></a>
+<a href="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0.svg"></a>
+<div style="width: 389px; height: 22px; border: 0.001px solid black; border-radius: 2px;">
+    <h3 style="text-align: center;">brain even</h3>
+</div>
 
-brain calc https://asciinema.org/a/qOJcorOECOx4LukIm9hVMHxus
+<a href="https://asciinema.org/a/qOJcorOECOx4LukIm9hVMHxus" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/qOJcorOECOx4LukIm9hVMHxus.svg"></a>
+<div style="width: 389px; height: 22px; border: 0.001px solid black; border-radius: 2px;">
+    <h3 style="text-align: center;">brain calc</h3>
+</div>
 
-brain gcd https://asciinema.org/a/6IoyGxT5MEGpZw9PBPRQGorkJ
+<a href="https://asciinema.org/a/6IoyGxT5MEGpZw9PBPRQGorkJ" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/6IoyGxT5MEGpZw9PBPRQGorkJ.svg"></a>
+<div style="width: 389px; height: 22px; border: 0.001px solid black; border-radius: 2px;">
+    <h3 style="text-align: center;">brain gcd</h3>
+</div>
 
-brain progression https://asciinema.org/a/q48N9pmI6fjyasNi8qxfNzcb2
+<a href="https://asciinema.org/a/q48N9pmI6fjyasNi8qxfNzcb2" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/q48N9pmI6fjyasNi8qxfNzcb2.svg"></a>
+<div style="width: 389px; height: 22px; border: 0.001px solid black; border-radius: 2px;">
+    <h3 style="text-align: center;">brain progression</h3>
+</div>
 
-brain prime https://asciinema.org/a/UjBB9URtKpgQHAhqbV4YRSbv9
+<a href="https://asciinema.org/a/UjBB9URtKpgQHAhqbV4YRSbv9" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/UjBB9URtKpgQHAhqbV4YRSbv9.svg"></a>
+<div style="width: 389px; height: 22px; border: 0.001px solid black; border-radius: 2px;">
+    <h3 style="text-align: center;">brain prime</h3>
+</div>
+
 
