@@ -1,57 +1,33 @@
-import readlineSync from 'readline-sync';
-import { greeting, randomNumberInRange } from '../../index.js';
+import { randomNumberInRange } from '../../index.js';
 
-const runBrainEven = () => {
-  greeting();
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  console.log('Answer "yes" if the number is even, otherwise answer "no".');
+export const rulesOfGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-  const firstNumberRange = 1;
-  const lastNumberRange = 25;
-  let randomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-  console.log(`Question: ${randomNumber}`);
+const firstNumberRange = 1;
+const lastNumberRange = 25;
+const randomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
+const secondRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
+const thirdRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
 
-  let correctAnswer = '';
-  if (randomNumber % 2 === 0) {
-    correctAnswer = 'yes';
-  } else if (randomNumber % 2 !== 0) {
-    correctAnswer = 'no';
-  }
+let answerOne;
+if (randomNumber % 2 === 0) {
+  answerOne = 'yes';
+} else if (randomNumber % 2 !== 0) {
+  answerOne = 'no';
+}
 
-  let userAnswer = readlineSync.question('Your answer: ');
-  if (userAnswer === correctAnswer) {
-    console.log('Correct!');
+let answerTwo;
+if (secondRandomNumber % 2 === 0) {
+  answerTwo = 'yes';
+} else if (secondRandomNumber % 2 !== 0) {
+  answerTwo = 'no';
+}
 
-    randomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-    console.log(`Question: ${randomNumber}`);
+let answerThree;
+if (thirdRandomNumber % 2 === 0) {
+  answerThree = 'yes';
+} else if (thirdRandomNumber % 2 !== 0) {
+  answerThree = 'no';
+}
 
-    if (randomNumber % 2 === 0) {
-      correctAnswer = 'yes';
-    } else if (randomNumber % 2 !== 0) {
-      correctAnswer = 'no';
-    }
-
-    userAnswer = readlineSync.question('Your answer: ');
-    if (userAnswer === correctAnswer) {
-      console.log('Correct!');
-
-      randomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-      console.log(`Question: ${randomNumber}`);
-
-      if (randomNumber % 2 === 0) {
-        correctAnswer = 'yes';
-      } else if (randomNumber % 2 !== 0) {
-        correctAnswer = 'no';
-      }
-      userAnswer = readlineSync.question('Your answer: ');
-      if (userAnswer === correctAnswer) {
-        return `Correct!\nCongratulations, ${userName}!`;
-      }
-      return `'${userAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
-    }
-    return `'${userAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
-  }
-  return `'${userAnswer}' is a wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`;
-};
-export default runBrainEven;
+export const arrayQuestions = [randomNumber, secondRandomNumber, thirdRandomNumber];
+export const arrayAnswers = [answerOne, answerTwo, answerThree];
