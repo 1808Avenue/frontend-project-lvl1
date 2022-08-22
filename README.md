@@ -7,22 +7,25 @@
 <p>Node.js версии 13 и выше.</p>
 <h3>Установка:</h3>
 <a href="https://asciinema.org/a/iKBr7k64DcrNbZdrz5LnVvFOZ" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/iKBr7k64DcrNbZdrz5LnVvFOZ.svg"></a>
-<p></p>
 
-<h3 style="text-align: center;">brain even</h3>
+
+<h2>Описание:</h2>
+<h3>Игра: "Проверка на чётность"</h3>
+<p>brain-even</p>
 <a href="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/Swr3AAfMnCsahDIBumrAy4gm0.svg"></a>
 
-<h3 style="text-align: center;">brain calc</h3>
+<h3>Игра: "Калькулятор"</h3>
+<p>brain-calc</p>
 <a href="https://asciinema.org/a/qOJcorOECOx4LukIm9hVMHxus" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/qOJcorOECOx4LukIm9hVMHxus.svg"></a>
 
-<h3 style="text-align: center;">brain gcd</h3>
+<h3>Игра: "НОД"</h3>
+<p>brain-gcd</p>
 <a href="https://asciinema.org/a/6IoyGxT5MEGpZw9PBPRQGorkJ" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/6IoyGxT5MEGpZw9PBPRQGorkJ.svg"></a>
 
-<h3 style="text-align: center;">brain progression</h3>
+<h3>Игра: "Арифметическая прогрессия"</h3>
+<p>brain-progression</p>
 <a href="https://asciinema.org/a/q48N9pmI6fjyasNi8qxfNzcb2" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/q48N9pmI6fjyasNi8qxfNzcb2.svg"></a>
 
-<h3 style="text-align: center;">brain prime</h3>
+<h3>Игра: "Простое ли число?"</h3>
+<p>brain-prime</p>
 <a href="https://asciinema.org/a/UjBB9URtKpgQHAhqbV4YRSbv9" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/UjBB9URtKpgQHAhqbV4YRSbv9.svg"></a>
-
-
-
