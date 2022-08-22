@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import runBrainPrime from '../src/games/game-prime.js';
+import { brainGamesCore } from '../index.js';
+import { rulesOfGame, arrayQuestions, arrayAnswers } from '../src/games/game-prime.js';
 
-console.log(runBrainPrime());
+brainGamesCore(rulesOfGame, arrayQuestions, arrayAnswers);
