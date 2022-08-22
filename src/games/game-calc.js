@@ -1,86 +1,71 @@
-import readlineSync from 'readline-sync';
-import { greeting, randomNumberInRange } from '../../index.js';
+import { randomNumberInRange } from '../../index.js';
 
-const runBrainCalc = () => {
-  greeting();
-  const userName = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${userName}!`);
-  console.log('What is the result of the expression?');
+export const rulesOfGame = 'What is the result of the expression?';
 
-  const firstNumberRange = 1;
-  const lastNumberRange = 25;
-  let firstRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-  let secondRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
+const firstNumberRange = 1;
+const lastNumberRange = 25;
+let firstRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
+let secondRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
 
-  const operator = ['+', '-', '*'];
-  const firstOperatorIndex = 0;
-  const lastOperatorIndex = operator.length - 1;
+const operator = ['+', '-', '*'];
+const firstOperatorIndex = 0;
+const lastOperatorIndex = operator.length - 1;
+let randomOperator = operator[randomNumberInRange(firstOperatorIndex, lastOperatorIndex)];
 
-  let randomOperator = operator[randomNumberInRange(firstOperatorIndex, lastOperatorIndex)];
-  console.log(`Question: ${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`);
-  let userAnswer = readlineSync.question('Your answer: ');
-  let result = '';
-  switch (randomOperator) {
-    case '+':
-      result = firstRandomNumber + secondRandomNumber;
-      break;
-    case '-':
-      result = firstRandomNumber - secondRandomNumber;
-      break;
-    case '*':
-      result = firstRandomNumber * secondRandomNumber;
-      break;
-    default:
-  }
-  if (userAnswer === result.toString()) {
-    console.log('Correct!');
+const questionOne = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+let result;
+switch (randomOperator) {
+  case '+':
+    result = firstRandomNumber + secondRandomNumber;
+    break;
+  case '-':
+    result = firstRandomNumber - secondRandomNumber;
+    break;
+  case '*':
+    result = firstRandomNumber * secondRandomNumber;
+    break;
+  default:
+    throw new Error(`Unknown state: '${randomOperator}'!`);
+}
+const answerOne = result.toString();
 
-    randomOperator = operator[randomNumberInRange(firstOperatorIndex, lastOperatorIndex)];
-    firstRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-    secondRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
+firstRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
+secondRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
+randomOperator = operator[randomNumberInRange(firstOperatorIndex, lastOperatorIndex)];
+const questionTwo = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+switch (randomOperator) {
+  case '+':
+    result = firstRandomNumber + secondRandomNumber;
+    break;
+  case '-':
+    result = firstRandomNumber - secondRandomNumber;
+    break;
+  case '*':
+    result = firstRandomNumber * secondRandomNumber;
+    break;
+  default:
+    throw new Error(`Unknown state: '${randomOperator}'!`);
+}
+const answerTwo = result.toString();
 
-    console.log(`Question: ${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`);
-    userAnswer = readlineSync.question('Your answer: ');
-    switch (randomOperator) {
-      case '+':
-        result = firstRandomNumber + secondRandomNumber;
-        break;
-      case '-':
-        result = firstRandomNumber - secondRandomNumber;
-        break;
-      case '*':
-        result = firstRandomNumber * secondRandomNumber;
-        break;
-      default:
-    }
-    if (userAnswer === result.toString()) {
-      console.log('Correct!');
+firstRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
+secondRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
+randomOperator = operator[randomNumberInRange(firstOperatorIndex, lastOperatorIndex)];
+const questionThree = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+switch (randomOperator) {
+  case '+':
+    result = firstRandomNumber + secondRandomNumber;
+    break;
+  case '-':
+    result = firstRandomNumber - secondRandomNumber;
+    break;
+  case '*':
+    result = firstRandomNumber * secondRandomNumber;
+    break;
+  default:
+    throw new Error(`Unknown state: '${randomOperator}'!`);
+}
+const answerThree = result.toString();
 
-      randomOperator = operator[randomNumberInRange(firstOperatorIndex, lastOperatorIndex)];
-      firstRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-      secondRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-
-      console.log(`Question: ${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`);
-      userAnswer = readlineSync.question('Your answer: ');
-      switch (randomOperator) {
-        case '+':
-          result = firstRandomNumber + secondRandomNumber;
-          break;
-        case '-':
-          result = firstRandomNumber - secondRandomNumber;
-          break;
-        case '*':
-          result = firstRandomNumber * secondRandomNumber;
-          break;
-        default:
-      }
-      if (userAnswer === result.toString()) {
-        return `Correct!\nCongratulations, ${userName}!`;
-      }
-      return `'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`;
-    }
-    return `'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`;
-  }
-  return `'${userAnswer}' is wrong answer ;(. Correct answer was '${result}'.\nLet's try again, ${userName}!`;
-};
-export default runBrainCalc;
+export const arrayQuestions = [questionOne, questionTwo, questionThree];
+export const arrayAnswers = [answerOne, answerTwo, answerThree];
