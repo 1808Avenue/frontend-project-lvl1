@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import runBrainCalc from '../src/games/game-calc.js';
+import { brainGamesCore } from '../index.js';
+import { rulesOfGame, arrayQuestions, arrayAnswers } from '../src/games/game-calc.js';
 
-console.log(runBrainCalc());
+brainGamesCore(rulesOfGame, arrayQuestions, arrayAnswers);
