@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import runBrainGcd from '../src/games/game-gcd.js';
+import { brainGamesCore } from '../index.js';
+import { rulesOfGame, arrayQuestions, arrayAnswers } from '../src/games/game-gcd.js';
 
-console.log(runBrainGcd());
+brainGamesCore(rulesOfGame, arrayQuestions, arrayAnswers);
