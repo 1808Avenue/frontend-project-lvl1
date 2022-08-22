@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import runBrainEven from '../src/games/game-even.js';
+import { brainGamesCore } from '../index.js';
+import { rulesOfGame, arrayQuestions, arrayAnswers } from '../src/games/game-even.js';
 
-console.log(runBrainEven());
+brainGamesCore(rulesOfGame, arrayQuestions, arrayAnswers);
