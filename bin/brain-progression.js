@@ -1,4 +1,5 @@
 #!/usr/bin/env node
-import runBrainProgression from '../src/games/game-progression.js';
+import { brainGamesCore } from '../index.js';
+import { rulesOfGame, arrayQuestions, arrayAnswers } from '../src/games/game-progression.js';
 
-console.log(runBrainProgression());
+brainGamesCore(rulesOfGame, arrayQuestions, arrayAnswers);
