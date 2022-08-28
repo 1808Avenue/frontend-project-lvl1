@@ -14,6 +14,7 @@ const getArrayQuestionAnswer = () => {
   const randomOperator = operator[randomNumberInRange(firstOperatorIndex, lastOperatorIndex)];
 
   const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+
   let result;
   switch (randomOperator) {
     case '+':
@@ -30,8 +31,10 @@ const getArrayQuestionAnswer = () => {
   }
   const answer = result.toString();
 
-  const array = [question, answer];
-  return array;
+  const arrayQuestionAnswer = [question, answer];
+  return arrayQuestionAnswer;
 };
 
-export const runBrainCalc = () => brainGamesCore(rulesOfGame, getArrayQuestionAnswer());
+const runGameCalc = () => brainGamesCore(rulesOfGame, getArrayQuestionAnswer);
+
+export default runGameCalc;
