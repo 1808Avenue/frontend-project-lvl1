@@ -1,38 +1,28 @@
-import { brainGamesCore, randomNumberInRange } from '../index.js';
+import getRandomNumberInRange from '../helpers.js';
+import { runGameCore, lowerLimitInRange, upperLimitInRange } from '../index.js';
 
 const rulesOfGame = 'Find the greatest common divisor of given numbers.';
 
-const getArrayQuestionAnswer = () => {
-  const getGcd = (a, b) => {
-    let firstElement = a;
-    let secondElement = b;
+const getGcd = (firstNumber, secondNumber) => {
+  let a = firstNumber;
+  let b = secondNumber;
 
-    while (firstElement !== secondElement) {
-      if (a === 0) {
-        return b;
-      } if (b === 0) {
-        return a;
-      } if (firstElement > secondElement) {
-        firstElement -= secondElement;
-      } else {
-        secondElement -= firstElement;
-      }
-    }
-    return firstElement;
-  };
-
-  const firstNumberRange = 1;
-  const lastNumberRange = 25;
-  const firstRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-  const secondRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-
-  const question = `${firstRandomNumber} ${secondRandomNumber}`;
-  const answer = getGcd(firstRandomNumber, secondRandomNumber).toString();
-
-  const arrayQuestionAnswer = [question, answer];
-  return arrayQuestionAnswer;
+  while (b !== 0) {
+    b = a % (a = b);
+  }
+  return a;
 };
 
-const runGameGcd = () => brainGamesCore(rulesOfGame, getArrayQuestionAnswer);
+const getQuestionAnswerPair = () => {
+  const firstRandomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
+  const secondRandomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
+
+  const question = `${firstRandomNumber} ${secondRandomNumber}`;
+  const correctAnswer = getGcd(firstRandomNumber, secondRandomNumber).toString();
+
+  return [question, correctAnswer];
+};
+
+const runGameGcd = () => runGameCore(rulesOfGame, getQuestionAnswerPair);
 
 export default runGameGcd;
