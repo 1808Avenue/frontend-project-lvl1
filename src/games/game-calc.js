@@ -1,40 +1,37 @@
-import { brainGamesCore, randomNumberInRange } from '../index.js';
+import getRandomNumberInRange from '../helpers.js';
+import { runGameCore, lowerLimitInRange, upperLimitInRange } from '../index.js';
 
 const rulesOfGame = 'What is the result of the expression?';
 
-const getArrayQuestionAnswer = () => {
-  const firstNumberRange = 1;
-  const lastNumberRange = 25;
-  const firstRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-  const secondRandomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
-
-  const operator = ['+', '-', '*'];
-  const firstOperatorIndex = 0;
-  const lastOperatorIndex = operator.length - 1;
-  const randomOperator = operator[randomNumberInRange(firstOperatorIndex, lastOperatorIndex)];
-
-  const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
-
-  let result;
-  switch (randomOperator) {
+const getCorrectAnswer = (firstOperand, operator, secondOperand) => {
+  switch (operator) {
     case '+':
-      result = firstRandomNumber + secondRandomNumber;
-      break;
+      return firstOperand + secondOperand;
     case '-':
-      result = firstRandomNumber - secondRandomNumber;
-      break;
+      return firstOperand - secondOperand;
     case '*':
-      result = firstRandomNumber * secondRandomNumber;
-      break;
+      return firstOperand * secondOperand;
     default:
-      throw new Error(`Unknown state: '${randomOperator}'!`);
+      throw new Error(`Unknown state: '${operator}'!`);
   }
-  const answer = result.toString();
-
-  const arrayQuestionAnswer = [question, answer];
-  return arrayQuestionAnswer;
 };
 
-const runGameCalc = () => brainGamesCore(rulesOfGame, getArrayQuestionAnswer);
+const getQuestionAnswerPair = () => {
+  const firstRandomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
+  const secondRandomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
+
+  const operators = ['+', '-', '*'];
+  const lowerLimitIndex = 0;
+  const upperLimitIndex = operators.length - 1;
+  const randomOperator = operators[getRandomNumberInRange(lowerLimitIndex, upperLimitIndex)];
+
+  const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
+  let correctAnswer = getCorrectAnswer(firstRandomNumber, randomOperator, secondRandomNumber);
+  correctAnswer = correctAnswer.toString();
+
+  return [question, correctAnswer];
+};
+
+const runGameCalc = () => runGameCore(rulesOfGame, getQuestionAnswerPair);
 
 export default runGameCalc;
