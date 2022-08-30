@@ -1,27 +1,26 @@
-import { brainGamesCore, randomNumberInRange } from '../index.js';
+import getRandomNumberInRange from '../helpers.js';
+import { runGameCore, lowerLimitInRange, upperLimitInRange } from '../index.js';
 
 const rulesOfGame = 'What number is missing in the progression?';
 
-const getArrayQuestionAnswer = () => {
-  const removeCommas = (string) => {
-    let result = '';
-    for (let i = 0; i < string.length; i += 1) {
-      result += string[i].replace(',', ' ');
-    }
-    return result;
-  };
+const removeCommas = (string) => {
+  let result = '';
+  for (let i = 0; i < string.length; i += 1) {
+    result += string[i].replace(',', ' ');
+  }
+  return result;
+};
 
-  const firstNumberRange = 1;
-  const lastNumberRange = 25;
-  let randomNumber = randomNumberInRange(firstNumberRange, lastNumberRange);
+const getQuestionAnswerPair = () => {
+  let randomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
 
-  const firstNumberStepRange = 2;
-  const lastNumberStepRange = 5;
-  const randomStep = randomNumberInRange(firstNumberStepRange, lastNumberStepRange);
+  const lowerLimitStepRange = 2;
+  const upperLimitStepRange = 5;
+  const randomStep = getRandomNumberInRange(lowerLimitStepRange, upperLimitStepRange);
 
-  const firstNumberLengthRange = 5;
-  const lastNumberLengthRange = 10;
-  const lengthNumbers = randomNumberInRange(firstNumberLengthRange, lastNumberLengthRange);
+  const lowerLimitLengthRange = 5;
+  const upperLimitLengthRange = 10;
+  const lengthNumbers = getRandomNumberInRange(lowerLimitLengthRange, upperLimitLengthRange);
 
   const arrayNumbers = [];
   for (let i = 0; i < lengthNumbers; i += 1) {
@@ -29,20 +28,19 @@ const getArrayQuestionAnswer = () => {
     arrayNumbers[i] = randomNumber;
   }
 
-  const firstIndexRange = 0;
-  const lastIndexRange = lengthNumbers - 1;
-  const randomIndexColon = randomNumberInRange(firstIndexRange, lastIndexRange);
+  const lowerLimitIndex = 0;
+  const upperLimitIndex = lengthNumbers - 1;
+  const randomIndexColon = getRandomNumberInRange(lowerLimitIndex, upperLimitIndex);
 
   const correctNumber = arrayNumbers[randomIndexColon];
   arrayNumbers[randomIndexColon] = '..';
 
   const question = removeCommas(arrayNumbers.toString());
-  const answer = correctNumber.toString();
+  const correctAnswer = correctNumber.toString();
 
-  const arrayQuestionAnswer = [question, answer];
-  return arrayQuestionAnswer;
+  return [question, correctAnswer];
 };
 
-const runGameProgression = () => brainGamesCore(rulesOfGame, getArrayQuestionAnswer);
+const runGameProgression = () => runGameCore(rulesOfGame, getQuestionAnswerPair);
 
 export default runGameProgression;
