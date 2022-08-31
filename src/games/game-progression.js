@@ -12,7 +12,7 @@ const removeCommas = (string) => {
 };
 
 const getQuestionAnswerPair = () => {
-  let randomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
+  const randomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
 
   const lowerLimitStepRange = 2;
   const upperLimitStepRange = 5;
@@ -24,8 +24,7 @@ const getQuestionAnswerPair = () => {
 
   const arrayNumbers = [];
   for (let i = 0; i < lengthNumbers; i += 1) {
-    randomNumber += randomStep;
-    arrayNumbers[i] = randomNumber;
+    arrayNumbers[i] = randomNumber + (randomStep * (i + 1));
   }
 
   const lowerLimitIndex = 0;
