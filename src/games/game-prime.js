@@ -11,11 +11,7 @@ const getPrimeNumber = (number) => {
       divisionСounter += 1;
     }
   }
-
-  if (divisionСounter === 2) {
-    return true;
-  }
-  return false;
+  return divisionСounter === 2;
 };
 
 const getQuestionAnswerPair = () => {
