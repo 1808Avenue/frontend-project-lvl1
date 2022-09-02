@@ -3,23 +3,7 @@ import { runGameCore, lowerLimitInRange, upperLimitInRange } from '../index.js';
 
 const rulesOfGame = 'Find the greatest common divisor of given numbers.';
 
-const getGcd = (a, b) => {
-  let firstNumber = a;
-  let secondNumber = b;
-
-  if (firstNumber === 0) {
-    return secondNumber;
-  }
-
-  while (secondNumber !== 0) {
-    if (firstNumber > secondNumber) {
-      firstNumber -= secondNumber;
-    } else {
-      secondNumber -= firstNumber;
-    }
-  }
-  return firstNumber;
-};
+const getGcd = (x, y) => (y === 0 ? x : getGcd(y, x % y));
 
 const getQuestionAnswerPair = () => {
   const firstRandomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
