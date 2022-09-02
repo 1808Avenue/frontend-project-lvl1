@@ -3,8 +3,15 @@ import { runGameCore, lowerLimitInRange, upperLimitInRange } from '../index.js';
 
 const rulesOfGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const getCorrectAnswer = (number) => {
+const isEvenNumber = (number) => {
   if (number % 2 === 0) {
+    return true;
+  }
+  return false;
+};
+
+const getCorrectAnswer = (number) => {
+  if (isEvenNumber(number)) {
     return 'yes';
   }
   return 'no';
