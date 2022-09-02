@@ -3,12 +3,12 @@ import { runGameCore, lowerLimitInRange, upperLimitInRange } from '../index.js';
 
 const rulesOfGame = 'What number is missing in the progression?';
 
-const removeCommas = (string) => {
-  let result = '';
-  for (let i = 0; i < string.length; i += 1) {
-    result += string[i].replace(',', ' ');
+const getArrayOfArithmeticProgression = (number, step, lengthNumbers) => {
+  const arrayNumbers = [];
+  for (let i = 0; i < lengthNumbers; i += 1) {
+    arrayNumbers[i] = number + (step * (i + 1));
   }
-  return result;
+  return arrayNumbers;
 };
 
 const getQuestionAnswerPair = () => {
@@ -22,10 +22,7 @@ const getQuestionAnswerPair = () => {
   const upperLimitLengthRange = 10;
   const lengthNumbers = getRandomNumberInRange(lowerLimitLengthRange, upperLimitLengthRange);
 
-  const arrayNumbers = [];
-  for (let i = 0; i < lengthNumbers; i += 1) {
-    arrayNumbers[i] = randomNumber + (randomStep * (i + 1));
-  }
+  const arrayNumbers = getArrayOfArithmeticProgression(randomNumber, randomStep, lengthNumbers);
 
   const lowerLimitIndex = 0;
   const upperLimitIndex = lengthNumbers - 1;
@@ -34,7 +31,7 @@ const getQuestionAnswerPair = () => {
   const correctNumber = arrayNumbers[randomIndexColon];
   arrayNumbers[randomIndexColon] = '..';
 
-  const question = removeCommas(arrayNumbers.toString());
+  const question = arrayNumbers.join(' ');
   const correctAnswer = correctNumber.toString();
 
   return [question, correctAnswer];
