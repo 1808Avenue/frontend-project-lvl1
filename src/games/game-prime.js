@@ -18,7 +18,7 @@ const getQuestionAnswerPair = () => {
   const randomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
   const question = randomNumber;
 
-  const correctAnswer = (getPrimeNumber(randomNumber) === true) ? 'yes' : 'no';
+  const correctAnswer = (getPrimeNumber(randomNumber)) ? 'yes' : 'no';
 
   return [question, correctAnswer];
 };
