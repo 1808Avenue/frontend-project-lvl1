@@ -6,17 +6,17 @@ const rulesOfGame = 'What is the result of the expression?';
 const getCorrectAnswer = (firstOperand, operator, secondOperand) => {
   switch (operator) {
     case '+':
-      return (firstOperand + secondOperand).toString();
+      return (firstOperand + secondOperand);
     case '-':
-      return (firstOperand - secondOperand).toString();
+      return (firstOperand - secondOperand);
     case '*':
-      return (firstOperand * secondOperand).toString();
+      return (firstOperand * secondOperand);
     default:
       throw new Error(`Unknown state: '${operator}'!`);
   }
 };
 
-const getQuestionAnswerPair = () => {
+const preparingDataForRound = () => {
   const firstRandomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
   const secondRandomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
 
@@ -28,9 +28,9 @@ const getQuestionAnswerPair = () => {
   const question = `${firstRandomNumber} ${randomOperator} ${secondRandomNumber}`;
   const correctAnswer = getCorrectAnswer(firstRandomNumber, randomOperator, secondRandomNumber);
 
-  return [question, correctAnswer];
+  return [question, correctAnswer.toString()];
 };
 
-const runGameCalc = () => runGameCore(rulesOfGame, getQuestionAnswerPair);
+const runGameCalc = () => runGameCore(rulesOfGame, preparingDataForRound);
 
 export default runGameCalc;
