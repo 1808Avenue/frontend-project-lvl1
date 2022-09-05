@@ -3,12 +3,7 @@ import { runGameCore, lowerLimitInRange, upperLimitInRange } from '../index.js';
 
 const rulesOfGame = 'Answer "yes" if the number is even, otherwise answer "no".';
 
-const isEvenNumber = (number) => {
-  if (number % 2 === 0) {
-    return true;
-  }
-  return false;
-};
+const isEvenNumber = (number) => (number % 2 === 0 ? number : false);
 
 const getCorrectAnswer = (number) => {
   if (isEvenNumber(number)) {
@@ -17,7 +12,7 @@ const getCorrectAnswer = (number) => {
   return 'no';
 };
 
-const getQuestionAnswerPair = () => {
+const preparingDataForRound = () => {
   const randomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
   const question = randomNumber;
 
@@ -26,6 +21,6 @@ const getQuestionAnswerPair = () => {
   return [question, correctAnswer];
 };
 
-const runGameEven = () => runGameCore(rulesOfGame, getQuestionAnswerPair);
+const runGameEven = () => runGameCore(rulesOfGame, preparingDataForRound);
 
 export default runGameEven;
