@@ -3,15 +3,15 @@ import { runGameCore, lowerLimitInRange, upperLimitInRange } from '../index.js';
 
 const rulesOfGame = 'What number is missing in the progression?';
 
-const getArrayOfArithmeticProgression = (number, step, lengthNumbers) => {
-  const arrayNumbers = [];
-  for (let i = 0; i < lengthNumbers; i += 1) {
-    arrayNumbers[i] = number + (step * (i + 1));
+const getArithmeticProgression = (number, step, progressionLength) => {
+  const arithmeticProgression = [];
+  for (let i = 0; i < progressionLength; i += 1) {
+    arithmeticProgression[i] = number + (step * (i + 1));
   }
-  return arrayNumbers;
+  return arithmeticProgression;
 };
 
-const getQuestionAnswerPair = () => {
+const preparingDataForRound = () => {
   const randomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
 
   const lowerLimitStepRange = 2;
@@ -22,7 +22,7 @@ const getQuestionAnswerPair = () => {
   const upperLimitLengthRange = 10;
   const lengthNumbers = getRandomNumberInRange(lowerLimitLengthRange, upperLimitLengthRange);
 
-  const arrayNumbers = getArrayOfArithmeticProgression(randomNumber, randomStep, lengthNumbers);
+  const arrayNumbers = getArithmeticProgression(randomNumber, randomStep, lengthNumbers);
 
   const lowerLimitIndex = 0;
   const upperLimitIndex = lengthNumbers - 1;
@@ -37,6 +37,6 @@ const getQuestionAnswerPair = () => {
   return [question, correctAnswer];
 };
 
-const runGameProgression = () => runGameCore(rulesOfGame, getQuestionAnswerPair);
+const runGameProgression = () => runGameCore(rulesOfGame, preparingDataForRound);
 
 export default runGameProgression;
