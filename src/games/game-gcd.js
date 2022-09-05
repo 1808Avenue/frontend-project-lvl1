@@ -5,7 +5,7 @@ const rulesOfGame = 'Find the greatest common divisor of given numbers.';
 
 const getGcd = (x, y) => (y === 0 ? x : getGcd(y, x % y));
 
-const getQuestionAnswerPair = () => {
+const preparingDataForRound = () => {
   const firstRandomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
   const secondRandomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
 
@@ -15,6 +15,6 @@ const getQuestionAnswerPair = () => {
   return [question, correctAnswer];
 };
 
-const runGameGcd = () => runGameCore(rulesOfGame, getQuestionAnswerPair);
+const runGameGcd = () => runGameCore(rulesOfGame, preparingDataForRound);
 
 export default runGameGcd;
