@@ -14,7 +14,7 @@ const getPrimeNumber = (number) => {
   return divisionСounter === 2;
 };
 
-const getQuestionAnswerPair = () => {
+const preparingDataForRound = () => {
   const randomNumber = getRandomNumberInRange(lowerLimitInRange, upperLimitInRange);
   const question = randomNumber;
 
@@ -23,6 +23,6 @@ const getQuestionAnswerPair = () => {
   return [question, correctAnswer];
 };
 
-const runGamePrime = () => runGameCore(rulesOfGame, getQuestionAnswerPair);
+const runGamePrime = () => runGameCore(rulesOfGame, preparingDataForRound);
 
 export default runGamePrime;
