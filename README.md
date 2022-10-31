@@ -2,7 +2,7 @@
 [![Actions Status](https://github.com/1808Avenue/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/1808Avenue/frontend-project-lvl1/actions)
 <a href="https://codeclimate.com/github/1808Avenue/frontend-project-lvl1/maintainability"><img src="https://api.codeclimate.com/v1/badges/522e4dc9052df218b3b1/maintainability" /></a>
 
-<p>Мой первый учебный проект, под названием "Игры Разума", состоит из пяти интерактивных, консольных мини-игр.</p>
+<p>Первый учебный проект, под названием "Игры Разума", состоит из пяти интерактивных, консольных мини-игр.</p>
 <h3>Системные требования:</h3>
 <p>Node.js версии 13 и выше.</p>
 <h3>Установка:</h3>
