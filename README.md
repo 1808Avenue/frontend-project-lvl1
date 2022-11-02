@@ -6,10 +6,13 @@
 <h3>Системные требования:</h3>
 <p>Node.js версии 13 и выше.</p>
 <h3>Установка:</h3>
-<p><b>1. </b>git clone<br><b>2. </b>cd frontend-project-lvl1/<br><b>3. </b>make install<br><b>4. </b>npm link<br><b>5. </b>Готово к запуску...</p>
-
-<a href="https://asciinema.org/a/iKBr7k64DcrNbZdrz5LnVvFOZ" target="_blank"><img style="width: 389px; height: 330px;" src="https://asciinema.org/a/iKBr7k64DcrNbZdrz5LnVvFOZ.svg"></a>
-
+<ol>
+    <li><pre>git clone</pre></li>
+    <li><pre>cd frontend-project-lvl1/</pre></li>
+    <li><pre>make install</pre></li>
+    <li><pre>npm link</pre></li>
+    <li><pre>Готово к запуску...</pre></li>
+</ol>
 
 <h2>Описание:</h2>
 <h3>Игра: "Проверка на чётность"</h3>
